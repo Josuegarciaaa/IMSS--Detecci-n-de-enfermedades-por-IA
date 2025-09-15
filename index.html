@@ -27,7 +27,18 @@
     <main class="main-content">
         <div class="left-panel">
             <h1>Detección de Enfermedades con IA</h1>
-            <p class="description"><i class="fas fa-brain"></i> Esta aplicación utiliza inteligencia artificial avanzada para detectar enfermedades a través de imágenes de rayos X y tomografías. <i class="fas fa-camera"></i> Utiliza la webcam en tiempo real o sube una imagen para análisis inmediato.</p>
+            <p class="description"><i class="fas fa-brain"></i>Esta aplicación utiliza inteligencia artificial avanzada para detectar en imágenes médicas (rayos X y tomografías) las siguientes condiciones:</p>
+            <ul class="description" style="list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1rem; color: #555;">
+                <li>COVID-19</li>
+                <li>Tuberculosis</li>
+                <li>Tumor cerebral</li>
+                <li>Neumonía</li>
+                <li>Estado sano (sin patología detectable)</li>
+            </ul>
+            <p class="description"><i class="fas fa-camera"></i> Utiliza la webcam en tiempo real o sube una imagen para análisis inmediato.</p>
+            <p class="description" style="color: #a94442; font-weight: 600; margin-top: 1rem; background: rgba(231, 76, 60, 0.1); padding: 0.75rem; border-radius: 10px; border: 1px solid rgba(231, 76, 60, 0.3);">
+                <i class="fas fa-exclamation-triangle"></i> Esta aplicación no sustituye el diagnóstico de un médico real. Siempre consulta a un profesional de la salud para un diagnóstico definitivo.
+            </p>
             <div class="model-title">Modelo de Teachable Machine</div>
             <div id="loading-spinner" class="loading-spinner" style="display: block;">
                 <div class="spinner"></div>
