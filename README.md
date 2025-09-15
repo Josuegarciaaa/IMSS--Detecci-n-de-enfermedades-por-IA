@@ -14,7 +14,3 @@ Para que el modelo de Teachable Machine funcione correctamente en tu página web
 ```js
 const MODEL_URL = "./model/";
 ```
-
-7. Sirve tu proyecto con un servidor local (como `py -m http.server 8000`) para que los archivos se puedan cargar correctamente.
-
-Si quieres, puedo ayudarte a crear la estructura de carpetas y actualizar el código para que funcione con los archivos locales.
