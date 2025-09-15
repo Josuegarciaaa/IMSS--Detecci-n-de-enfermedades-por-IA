@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>IMSS - Detección de Enfermedades con IA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTktS3_SKj8bHmKiLISvla_CmuOSVm3yFSTQw&s" alt="IMSS Logo" style="height:40px; vertical-align: middle; margin-right: 10px;">
+                IMSS
+            </div>
+            <nav>
+                <!-- Navigation can be added here if needed -->
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="left-panel">
+            <h1>Detección de Enfermedades con IA</h1>
+            <p class="description"><i class="fas fa-brain"></i> Esta aplicación utiliza inteligencia artificial avanzada para detectar enfermedades a través de imágenes de rayos X y tomografías. <i class="fas fa-camera"></i> Utiliza la webcam en tiempo real o sube una imagen para análisis inmediato.</p>
+            <div class="model-title">Modelo de Teachable Machine</div>
+            <div id="loading-spinner" class="loading-spinner" style="display: block;">
+                <div class="spinner"></div>
+                <p>Cargando modelo...</p>
+                <progress id="loading-progress" value="0" max="100" class="loading-progress"></progress>
+            </div>
+            <div class="controls" id="controls" style="display: none;">
+                <button type="button" onclick="init()" class="start-button">Iniciar Webcam <i class="fas fa-camera"></i></button>
+                <button type="button" id="stop-button" onclick="stop()" class="stop-button" style="display:none;">Detener Webcam <i class="fas fa-stop"></i></button>
+                <input type="file" id="image-upload" accept="image/*" class="image-upload" />
+                <button type="button" id="clear-upload" class="clear-upload-button" style="display:none;">Eliminar archivo</button>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div id="webcam-container" class="webcam-container"></div>
+            <div id="label-container" class="label-container"></div>
+        </div>
+    </main>
+    <div class="floating-particles" aria-hidden="true"></div>
+
+    <footer>
+        <p>&copy; 2025 IMSS. Instituto Mexicano del Seguro Social - Tecnología de IA para diagnóstico médico asistido.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
